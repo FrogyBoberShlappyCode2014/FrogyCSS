@@ -88,5 +88,63 @@ body {
 div.div-shlyapa {
   color: aliceblue;
   background-color: #8411ef;
-  background: repeating-linear-gradient(45deg, limegreen, purple 10px, orange 20px);
+  background: repeating-linear-gradient(45deg, limegreen, purple 10px, orange 20px, aliceblue 25px);
+}
+/* 🚨 Статус Коду 418: I'm a teapot */
+.code-418 {
+  border: 5px double #ff0000; /* Подвійна червона рамка */
+  background-color: #ffcccc; /* Блідо-рожевий фон */
+  color: #8b0000; /* Темно-червоний текст */
+  padding: 15px;
+  animation: flicker-418 0.2s infinite alternate; /* Мерехтіння! */
+}
+
+@keyframes flicker-418 {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
+
+/* ⚠️ Попередження: Tenda D301 Overheating */
+.tenda-warning {
+  font-family: 'VT323', monospace; /* Моноширинний шрифт, як у старому модемі */
+  background-color: #ffff00; /* Жовтий, як значок "Увага" */
+  color: #000000;
+  border-left: 10px solid orange;
+  padding: 8px;
+}
+/* 🥜 Партія "ААА Арєшкі Біг Боб" - Стиль банера */
+.big-bob-banner {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  background-color: #8b4513; /* Коричневий, як горішок */
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 5px; /* Розтягнутий текст */
+  box-shadow: 0 0 15px #00ff00; /* Зелене свічення, як від MDL-Хаосу */
+}
+
+/* 🍩 Лічильник Біляшів (HUD) */
+.bilyash-hud {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffdd00; /* Золотистий, як біляш */
+  border: 2px solid #ffaa00;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', cursive; /* MDL-Геймінг шрифт */
+}
+/* 🤯 Дезорієнтація користувача */
+.mdl-confusion {
+  transform: skewX(-5deg) translateY(5px); /* Злегка нахилений і зміщений */
+  opacity: 0.9;
+  filter: blur(0.5px); /* Злегка розмитий */
+  transition: all 1s ease;
+}
+.mdl-confusion:hover {
+  filter: blur(0px); /* При наведенні стає чітким */
+  transform: skewX(0deg) translateY(0px);
 }
