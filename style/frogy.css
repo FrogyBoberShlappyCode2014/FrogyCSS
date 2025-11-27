@@ -1,4 +1,36 @@
-/* === FrogyStyle 2014: Legacy of Chaos === */
+/* === 🐸 FrogyStyle 2014: Legacy of Chaos (Реверс-Інжиніринг з :root) === */
+
+:root {
+  /* 🎨 Фрого-Палітра */
+  --frogy-color-primary: limegreen; /* Кнопка Шляппі, Лінія */
+  --frogy-color-secondary: purple; /* Рамка Кнопки Шляппі, Лінія */
+  --frogy-color-accent: orange; /* Рамка Картки, Лінія */
+  --frogy-color-text-dark: #222;
+  --frogy-color-text-light: white;
+  --frogy-color-bg-light: #fefefe;
+  --frogy-color-card-bg: #fff8dc; /* Колір Форового Картки */
+  --frogy-color-header-bg: #f0fff0; /* Колір Форового Body з index.html */
+
+  /* 📏 Розміри та Відступи */
+  --frogy-padding-base: 40px; /* Базовий відступ body */
+  --frogy-spacing-medium: 20px; /* mt-2, p-2 */
+  --frogy-spacing-small: 10px; /* Сітка */
+  --frogy-max-width-card: 500px;
+  
+  /* 🚀 Кнопка Шляппі */
+  --shlappy-btn-padding: 12px 24px;
+  --shlappy-btn-border-width: 3px;
+
+  /* 📦 Картка */
+  --card-border-width: 3px;
+  --card-box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+
+  /* 🌈 Мемні та Спеціальні */
+  --frogy-title-size: 48px;
+  --frogy-title-color: hotpink;
+  --shlyapa-bg-color: #8411ef; /* Колір div-shlyapa */
+  --line-gradient-steps: 10px, purple 10px, orange 20px; /* Для frogy-hr */
+}
 
 /* 🧹 Reset */
 * {
@@ -10,18 +42,18 @@
 /* 🧃 Базові стилі */
 body {
   font-family: 'Comic Sans MS', cursive;
-  background-color: #fefefe;
-  color: #222;
+  background-color: var(--frogy-color-bg-light);
+  color: var(--frogy-color-text-dark);
   line-height: 1.6;
-  padding: 40px;
+  padding: var(--frogy-padding-base);
 }
 
-/* 🛸 Кнопка Frogy */
+/* 🛸 Кнопка Frogy (.btn-shlappy) - Комбіновані стилі з index.html та frogy.css */
 .btn-shlappy {
-  background-color: limegreen;
-  border: 3px dashed purple;
-  color: white;
-  padding: 12px 24px;
+  background-color: var(--frogy-color-primary);
+  border: var(--shlappy-btn-border-width) dashed var(--frogy-color-secondary);
+  color: var(--frogy-color-text-light);
+  padding: var(--shlappy-btn-padding);
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -30,65 +62,58 @@ body {
   transform: scale(1.1) rotate(-2deg);
 }
 
-/* 📦 Картка */
+/* 📦 Картка (.card) - Комбіновані стилі з index.html та frogy.css */
 .card {
-  border: 3px dotted orange;
-  background-color: #fff8dc;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 500px;
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+  border: var(--card-border-width) dotted var(--frogy-color-accent);
+  background-color: var(--frogy-color-card-bg);
+  padding: var(--frogy-spacing-medium);
+  margin: var(--frogy-spacing-medium) auto;
+  max-width: var(--frogy-max-width-card);
+  box-shadow: var(--card-box-shadow);
 }
 
 /* 📐 Сітка */
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 calc(-1 * var(--frogy-spacing-small));
 }
 .col-6 {
   flex: 0 0 50%;
-  padding: 0 10px;
+  padding: 0 var(--frogy-spacing-small);
 }
 .col-4 {
   flex: 0 0 33.333%;
-  padding: 0 10px;
+  padding: 0 var(--frogy-spacing-small);
 }
 
 /* 🧰 Утиліти */
-.text-center {
-  text-align: center;
-}
-.hidden {
-  display: none;
-}
-.mt-2 {
-  margin-top: 20px;
-}
-.p-2 {
-  padding: 20px;
-}
-.bold {
-  font-weight: bold;
-}
+.text-center { text-align: center; }
+.hidden { display: none; }
+.mt-2 { margin-top: var(--frogy-spacing-medium); }
+.p-2 { padding: var(--frogy-spacing-medium); }
+.bold { font-weight: bold; }
 
 /* 🎨 Мемний естет */
 .frogy-title {
-  font-size: 48px;
-  color: hotpink;
+  font-size: var(--frogy-title-size);
+  color: var(--frogy-title-color);
   text-shadow: 2px 2px yellow;
 }
 
 .frogy-hr {
   border: none;
   height: 5px;
-  background: repeating-linear-gradient(45deg, limegreen, purple 10px, orange 20px);
+  /* Використовуємо змінну для кроків */
+  background: repeating-linear-gradient(45deg, var(--frogy-color-primary), var(--line-gradient-steps));
   margin: 40px 0;
 }
+
 div.div-shlyapa {
   color: aliceblue;
-  background-color: #8411ef;
-  background: repeating-linear-gradient(45deg, limegreen, purple 10px, orange 20px, aliceblue 25px);
+  background-color: var(--shlyapa-bg-color);
+  /* Комбінований градієнт */
+  background: repeating-linear-gradient(45deg, var(--frogy-color-primary), purple 10px, orange 20px, aliceblue 25px);
 }
 /* 🚨 Статус Коду 418: I'm a teapot */
 .code-418 {
