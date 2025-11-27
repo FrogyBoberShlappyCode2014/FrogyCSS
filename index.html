@@ -9,20 +9,16 @@
   <link rel="icon" type="image/png" href="frogy-icon.png">
   
   <style>
-    /* Тут залишаються тільки стилі, які не є частиною фреймворку, 
-      або ті, які повинні мати найвищий пріоритет.
-    */
+    /* Стилі, що перезаписують базові (як було у початковому index.html) */
     body {
-      /* Залишаємо font-family та фоновий колір з index.html для override базових стилів body з frogy.css */
       font-family: 'Comic Sans MS', cursive;
-      background-color: #f0fff0; /* Колір, який був у index.html */
-      padding: 40px; /* Відступ, який був у index.html */
+      background-color: #f0fff0;
+      padding: 40px;
     }
     .header {
       text-align: center;
       margin-bottom: 40px;
     }
-    /* Стилі .btn-shlappy та .card видалено, вони тепер у frogy.css */
   </style>
 </head>
 <body>
@@ -42,6 +38,29 @@
     </ul>
   </div>
 
+  <div class="card mt-2">
+    <h2 class="bold">🚨 Спецелементи MDL-Хаосу</h2>
+    
+    <div class="code-418 mt-2">
+      <p><strong>🚨 СТАТУС 418: I'm a teapot.</strong> Система потребує більше чаю.</p>
+    </div>
+
+    <div class="tenda-warning mt-2">
+      <p>⚠️ Tenda D301: Overheating warning! Reboot required. Temp: 78°C.</p>
+    </div>
+
+    <div class="big-bob-banner mt-2">
+      Партія "ААА Арєшкі Біг Боб"
+    </div>
+    
+    <p class="mdl-confusion mt-2">
+      🤯 Цей текст викликає **дезорієнтацію**! Наведіть курсор, щоб вирівняти його.
+    </p>
+
+    <hr class="frogy-hr">
+
+  </div>
+
   <div class="card">
     <h2>📖 Як використовувати</h2>
     <p>Підключи <code>frogy.css</code> до свого проєкту й застосовуй класи — без рев’ю, без страху, як справжній Frogy-хелпер.</p>
@@ -50,6 +69,10 @@
   <div class="div-shlyapa">
     <h2>Це тест div-shlyapa</h2>
     <p>I am test text. Lorem ipsum</p>
+  </div>
+  
+  <div class="bilyash-hud">
+    💰 Біляшів: 99
   </div>
 </body>
 </html>
